@@ -8,21 +8,24 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    var textAreaSquare: TextView? = null
+    var textAreaRectangle: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
-    fun calculateSquareArea(view: View) {
-        val editText = findViewById<EditText>(R.id.edit_text_number_square)
+    fun calculateRectangleArea(view: View) {
+        val editText = findViewById<EditText>(R.id.edit_text_number_rectangle)
         val text = editText.text.toString()
-        val sideSquare = text.toDouble()
-        val area =  sideSquare * sideSquare
-        val areaSquare:String = area.toString()
-        textAreaSquare?.setText(areaSquare)
-        textAreaSquare = findViewById(R.id.textAreaSquare)
+        val sideRectangle = text.toDouble()
+        val editText2 = findViewById<EditText>(R.id.edit_text_number_rectangle2)
+        val text2 = editText2.text.toString()
+        val sideRectangle2 = text2.toDouble()
+        val area =  sideRectangle * sideRectangle2
+        val areaRectangle:String = area.toString()
+        textAreaRectangle?.setText(areaRectangle)
+        textAreaRectangle = findViewById(R.id.textAreaRectangle)
     }
 
 
