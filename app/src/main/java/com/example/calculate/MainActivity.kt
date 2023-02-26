@@ -8,22 +8,21 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    var textAreaCircle: TextView? = null
+    var textAreaSquare: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
-    fun calculateCircleArea(view: View) {
-        val editText = findViewById<EditText>(R.id.edit_text_number_circle)
+    fun calculateSquareArea(view: View) {
+        val editText = findViewById<EditText>(R.id.edit_text_number_square)
         val text = editText.text.toString()
-        var radius = text.toDouble()
-        val pi = 3.14159
-        var area = pi * radius * radius
-        var areaCircle:String = area.toString()
-        textAreaCircle?.setText(areaCircle)
-        textAreaCircle = findViewById(R.id.textAreaCircle)
+        val sideSquare = text.toDouble()
+        val area =  sideSquare * sideSquare
+        val areaSquare:String = area.toString()
+        textAreaSquare?.setText(areaSquare)
+        textAreaSquare = findViewById(R.id.textAreaSquare)
     }
 
 

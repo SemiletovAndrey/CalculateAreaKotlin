@@ -96,6 +96,7 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
+        android:onClick="calculateSquareArea"
         android:id="@+id/btn_area_square"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
